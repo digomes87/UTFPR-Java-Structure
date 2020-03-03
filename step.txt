@@ -1,0 +1,6 @@
+Primeiro necessario compilar o arquivo
+javac nomedoarquivo.java
+
+para rodar o arquivo
+java nomedoarquivo
+
