@@ -3,4 +3,3 @@ javac nomedoarquivo.java
 
 para rodar o arquivo
 java nomedoarquivo
-
