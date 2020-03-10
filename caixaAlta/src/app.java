@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -5,12 +6,13 @@ public class app {
     public static Scanner entrada = new Scanner(System.in);
 
     public static void main(String args[]){
-        caixaAlta();
-        contaLetra();
-        contaVogal();
-        contaConsoantes();
-        contaPalavras();
-        diaSemana();
+//        caixaAlta();
+//        contaLetra();
+//        contaVogal();
+//        contaConsoantes();
+//        contaPalavras();
+//        diaSemana();
+        letraRepetida();
     }
 
     public static void caixaAlta(){
@@ -96,5 +98,18 @@ public class app {
         }
     }
 
+    public static void letraRepetida(){
+        HashMap<Character, Integer> map = new HashMap<>();
+        System.out.println("Digite uma frase: ");
+        String frase = entrada.nextLine();
+        int count=0;
+        for (int i=0;i<frase.length();i++){
+            if(frase.charAt(i)==frase.length()){
+                count++;
+            }
+        }
 
+        System.out.println("Character:  - Quantidade: " + count);
+
+    }
 }
