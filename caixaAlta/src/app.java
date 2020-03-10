@@ -9,6 +9,8 @@ public class app {
         contaLetra();
         contaVogal();
         contaConsoantes();
+        contaPalavras();
+        diaSemana();
     }
 
     public static void caixaAlta(){
@@ -55,8 +57,43 @@ public class app {
             }
         }
         System.out.println("A palavra: "+consoantes+" possui: "+count+" consoantes");
-    }public static void contaPalavras(){
+    }
 
+    public static void contaPalavras(){
+        System.out.println("Digite uma frase: ");
+        String qtdFrase = entrada.nextLine();
+        int count = qtdFrase.split(" ", -1).length- 1;
+        System.out.println("Numero de palavras: "+count);
+
+    }
+
+    public static void diaSemana(){
+        System.out.println("Digite um numero de 1 até 7");
+        int dia = entrada.nextInt();
+
+        switch (dia) {
+            case 1:
+                System.out.println("Segunda");
+                break;
+            case 2:
+                System.out.println("Terça");
+                break;
+            case 3:
+                System.out.println("Quarta");
+                break;
+            case 4:
+                System.out.println("Quinta");
+                break;
+            case 5:
+                System.out.println("Sexta");
+                break;
+            case 6:
+                System.out.println("Sabado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+        }
     }
 
 
