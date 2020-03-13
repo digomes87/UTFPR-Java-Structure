@@ -8,7 +8,10 @@ public class exercicios {
         //anoNascimento();
         //media();
         //soma4();
-        salario();
+        //salario();
+        //reajusteSalario();
+        //triangulo();
+        espetaculo();
     }
 
     public static void anoNascimento(){
@@ -100,4 +103,49 @@ public class exercicios {
         }
 
     }
+
+    public static void reajusteSalario(){
+        System.out.println("Digite seu salario: ");
+        double salario = entrada.nextFloat();
+        int reajuste = (int) (salario + ((salario*25)/100));
+
+        System.out.println("Teu reajuste foi de :"+ (reajuste-salario));
+    }
+
+    public static void triangulo(){
+        double base, altura, areaRetangulo;
+
+        System.out.println("Informe o tamanho da base do triangulo");
+        base = entrada.nextDouble();
+        System.out.println("Informe a altura do tringulo");
+        altura = entrada.nextDouble();
+
+        areaRetangulo = base * altura;
+
+        System.out.println("A area de um retangulo de base = " + base);
+        System.out.println("e altura " + altura);
+        System.out.println("é " + areaRetangulo);
+
+    }
+
+    public static void espetaculo(){
+        /*
+            Faça um programa que receba o custo de um espetáculo teatral e o preço do convite
+            desse espetáculo. Esse programa deve calcular e mostrar a quantidade de convites que
+            devem ser vendidos para que pelo menos o custo do espetáculo seja alcançado.
+         */
+        double precoEspetaculo, precoConvite = 0;
+        int numeroVendasConvite = 0;
+
+        System.out.println("Informe o Valor do Espetáculo:");
+        precoEspetaculo = entrada.nextDouble();
+
+        System.out.println("Informe o valor do Convite: ");
+        precoConvite = entrada.nextDouble();
+
+        numeroVendasConvite =  (int) (precoEspetaculo/precoConvite);
+
+        System.out.println("Precisa vender "+numeroVendasConvite+" convites para custiar o Evento");
+    }
+
 }
