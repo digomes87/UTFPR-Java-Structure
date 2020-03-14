@@ -19,6 +19,7 @@ public class exercicios {
         //maiorDeQuinze();
         //numeroPositivoNegativo();
         //ficha();
+        aumento();
     }
 
     public static void anoNascimento(){
@@ -289,5 +290,42 @@ public class exercicios {
         System.out.println("A maior altura da turma: "+maiorAlturaTurma);
         System.out.println("A menor altura da turma: "+menorAlturaTurma);
         System.out.println("A media de altura entre mulheres: "+media);
+    }
+
+    public static void aumento(){
+        int numFuncionario = 4;
+        double salario[] = new double[numFuncionario];
+        double salarioReajustado [] = new double[numFuncionario];
+        int reajuste [] = new int[numFuncionario];
+        String nomeFuncionario [] = new String[numFuncionario];
+
+        System.out.println("########## Iremos recalcular o percentual de aumento para cada funcionario ##########");
+
+        for (int i = 0; i <numFuncionario ; i++) {
+            System.out.println("Nome do Funcionario: ");
+            nomeFuncionario[i] = entrada.next();
+
+            System.out.println("Informe o salario do funcionario: "+nomeFuncionario[i]);
+            salario[i] = entrada.nextDouble();
+
+            if(salario[i] < 200){
+                reajuste[i] = ((int) Math.round(salario[i])*13)/100;
+            }
+            if(salario[i] > 200 && salario[i] < 400){
+                reajuste[i] = (int)Math.round(salario[i]*11)/100;
+            }
+            if(salario[i] > 400 && salario[i]<= 800){
+                reajuste[i] = (int)Math.round(salario[i]*9)/100;
+            }
+            if(salario[i] > 801){
+                reajuste[i] = (int)Math.round(salario[i]*7)/100;
+            }
+        }
+        for (int i = 0; i <nomeFuncionario.length ; i++) {
+            System.out.println("O funcionario: "+nomeFuncionario[i]);
+            System.out.println("Recebeu "+reajuste[i]+" de Reajuste");
+            System.out.println("Salario: "+salario[i]+" + Reajuste.");
+            System.out.println("Salario reajustado "+(salario[i]+reajuste[i]));
+        }
     }
 }
