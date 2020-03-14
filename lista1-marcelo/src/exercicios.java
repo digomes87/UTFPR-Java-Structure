@@ -14,7 +14,8 @@ public class exercicios {
         //espetaculo();
         //desconto();
         //quadrado();
-        controleIdade();
+        //controleIdade();
+        maiorNumero();
     }
 
     public static void anoNascimento(){
@@ -200,5 +201,25 @@ public class exercicios {
         System.out.println("Numero de pessoas menores de 21: "+contVinte);
         System.out.println("Numero de pessoas com mais de 50: "+countCinquenta);
 
+    }
+
+    public static void maiorNumero(){
+        int num = 0, maior=0, nm=0;
+
+        System.out.println("Informe um numero");
+        num = entrada.nextInt();
+        System.out.println("Agora voce deve informar "+num+" numeros. Irei conferir qual deles é o maior");
+
+        for (int i = 0; i <= num ; i++) {
+
+            System.out.println("Digite um numero: ");
+            maior = entrada.nextInt();
+            if(maior > 0){
+                if(maior > nm){
+                    nm = maior;
+                }
+            }
+        }
+        System.out.println("O maior numero é: "+nm);
     }
 }
