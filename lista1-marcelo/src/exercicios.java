@@ -11,7 +11,10 @@ public class exercicios {
         //salario();
         //reajusteSalario();
         //triangulo();
-        espetaculo();
+        //espetaculo();
+        //desconto();
+        //quadrado();
+        controleIdade();
     }
 
     public static void anoNascimento(){
@@ -148,4 +151,55 @@ public class exercicios {
         System.out.println("Precisa vender "+numeroVendasConvite+" convites para custiar o Evento");
     }
 
+    public static void desconto(){
+      /*
+      Faça um programa que receba o preço de um produto, calcule e mostre o novo preço,
+      sabendo-se que este sofreu um desconto de 10%.
+       */
+      double precoProduto, desconto, novoPreco = 0;
+
+      System.out.println("Informe o valor do Produto: ");
+      precoProduto = entrada.nextDouble();
+
+      desconto = (precoProduto*10)/100;
+      novoPreco = precoProduto-desconto;
+      System.out.println("Voce recebeu desconto de: "+desconto+" Valor final: "+novoPreco);
+
+    }
+
+    public static void quadrado(){
+        /*Faça um programa que calcule e mostre a área de um quadrado.
+        Sabe-se que: A = lado * lado.*/
+        int quadrado, valor = 0;
+        System.out.println("Digite um numero para calcular o lado: ");
+        valor = entrada.nextInt();
+
+        quadrado = valor * valor;
+
+        System.out.println("O Quadrado é: "+quadrado);
+    }
+
+    public static void controleIdade(){
+        int countMenos = 0, countMais = 0, pessoas = 0;
+        System.out.println("A idade de quantas Pessoas voce quer validar ?");
+        pessoas = entrada.nextInt();
+
+        int idade [] = new int[pessoas];
+        int i;
+        for (i = 1; i < idade.length; i++) {
+            System.out.println("Informe a Idade da Pessoa: ");
+            idade[i] = entrada.nextInt();
+        }
+        for (int t = 0; t < pessoas ; t++) {
+            System.out.println(idade[i]);
+            if (idade[i] < 18){countMenos = countMenos+1;}
+            else if(idade[i] > 50){countMais = countMais + 1;}
+            else{
+                System.out.println("Ninguem");
+            }
+        }
+
+        System.out.println("O total de pessoas com menos de 21 anos é: "+countMenos);
+        System.out.println("O total de pessoas com mais de 50 anos é: "+countMais);
+    }
 }
