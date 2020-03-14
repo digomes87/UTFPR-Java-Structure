@@ -15,7 +15,8 @@ public class exercicios {
         //desconto();
         //quadrado();
         //controleIdade();
-        maiorNumero();
+        //maiorNumero();
+        maiorDeQuinze();
     }
 
     public static void anoNascimento(){
@@ -221,5 +222,21 @@ public class exercicios {
             }
         }
         System.out.println("O maior numero é: "+nm);
+    }
+
+    public static void maiorDeQuinze(){
+        int num = 0, cont=0;
+
+        System.out.println("Informe 15 numeros aleatorios: ");
+        for (int i = 0; i <= 15 ; i++) {
+            System.out.println("Digit um numero:");
+            num = entrada.nextInt();
+
+            if(num > 30){
+                cont = cont + 1;
+            }
+        }
+
+        System.out.println("Da lista de numeros informados "+cont+" sao maiores que 30");
     }
 }
