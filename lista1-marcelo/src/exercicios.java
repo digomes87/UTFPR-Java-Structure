@@ -16,7 +16,9 @@ public class exercicios {
         //quadrado();
         //controleIdade();
         //maiorNumero();
-        maiorDeQuinze();
+        //maiorDeQuinze();
+        //numeroPositivoNegativo();
+        ficha();
     }
 
     public static void anoNascimento(){
@@ -238,5 +240,54 @@ public class exercicios {
         }
 
         System.out.println("Da lista de numeros informados "+cont+" sao maiores que 30");
+    }
+
+    public static void numeroPositivoNegativo(){
+        int numero, i, somapositivo=0, somanegativos=0;
+
+        for (int j = 0; j <20 ; j++) {
+            System.out.println("Informe numero positivo ou negativo:");
+            numero = entrada.nextInt();
+
+            if(numero >0 ){
+                somapositivo = somapositivo+1;
+            }else {
+                somanegativos = somanegativos + 1;
+            }
+        }
+        System.out.println("Total de numeros negativos: "+somanegativos);
+        System.out.println("Total de numeros positivos: "+somapositivo);
+    }
+
+    public static void ficha(){
+        int repetidor = 3;
+        double altura[] = new double[repetidor];
+        int cod[] = new int[repetidor];
+        int media = 0;
+        double maiorAlturaTurma = 0, menorAlturaTurma=0, mediaAlturaTurmaMulher=0;
+        for (int i = 0; i < repetidor ; i++) {
+            System.out.println("Informe a altura da pessoa:");
+            altura[i] = entrada.nextDouble();
+            System.out.println("\n 1- Masculino \n 2- Feminino");
+            cod[i] = entrada.nextInt();
+            if(cod[i] > 0 || cod[i]<3){
+                if (altura[i] > 0){
+                    if(altura[i] > maiorAlturaTurma){
+                        maiorAlturaTurma = altura[i];
+                    }
+                }
+                if(maiorAlturaTurma < menorAlturaTurma){
+                    menorAlturaTurma = altura[i];
+                }
+            }
+
+
+        }
+        //int aux = (int)mediaAlturaTurmaMulher/repetidor;
+        System.out.println("A maior altura da turma: "+maiorAlturaTurma);
+        System.out.println("A menor altura da turma: "+menorAlturaTurma);
+        System.out.println("A media de altura entre mulheres: "+mediaAlturaTurmaMulher);
+
+
     }
 }
