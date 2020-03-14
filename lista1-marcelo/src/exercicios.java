@@ -180,26 +180,25 @@ public class exercicios {
     }
 
     public static void controleIdade(){
-        int countMenos = 0, countMais = 0, pessoas = 0;
+        int contVinte = 0, countCinquenta = 0, idade = 0 , qtdIdade;
         System.out.println("A idade de quantas Pessoas voce quer validar ?");
-        pessoas = entrada.nextInt();
+        qtdIdade = entrada.nextInt();
 
-        int idade [] = new int[pessoas];
-        int i;
-        for (i = 1; i < idade.length; i++) {
-            System.out.println("Informe a Idade da Pessoa: ");
-            idade[i] = entrada.nextInt();
-        }
-        for (int t = 0; t < pessoas ; t++) {
-            System.out.println(idade[i]);
-            if (idade[i] < 18){countMenos = countMenos+1;}
-            else if(idade[i] > 50){countMais = countMais + 1;}
-            else{
-                System.out.println("Ninguem");
+        for (int i = 0; i < qtdIdade ; i++) {
+
+            System.out.println("Informe a idade da pessoa: ");
+            idade = entrada.nextInt();
+            if (idade > 0) {
+                if (idade <= 21) {
+                    contVinte = contVinte + 1;
+                }
+                if (idade >= 50) {
+                    countCinquenta = countCinquenta + 1;
+                }
             }
         }
+        System.out.println("Numero de pessoas menores de 21: "+contVinte);
+        System.out.println("Numero de pessoas com mais de 50: "+countCinquenta);
 
-        System.out.println("O total de pessoas com menos de 21 anos é: "+countMenos);
-        System.out.println("O total de pessoas com mais de 50 anos é: "+countMais);
     }
 }
