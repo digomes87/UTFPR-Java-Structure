@@ -18,7 +18,7 @@ public class exercicios {
         //maiorNumero();
         //maiorDeQuinze();
         //numeroPositivoNegativo();
-        ficha();
+        //ficha();
     }
 
     public static void anoNascimento(){
@@ -263,31 +263,31 @@ public class exercicios {
         int repetidor = 3;
         double altura[] = new double[repetidor];
         int cod[] = new int[repetidor];
-        int media = 0;
+        double media = 0;
         double maiorAlturaTurma = 0, menorAlturaTurma=0, mediaAlturaTurmaMulher=0;
         for (int i = 0; i < repetidor ; i++) {
             System.out.println("Informe a altura da pessoa:");
             altura[i] = entrada.nextDouble();
             System.out.println("\n 1- Masculino \n 2- Feminino");
             cod[i] = entrada.nextInt();
-            if(cod[i] > 0 || cod[i]<3){
+            if(cod[i]<repetidor){
                 if (altura[i] > 0){
+                    if(altura[i] < maiorAlturaTurma){
+                        menorAlturaTurma = altura[i];
+                    }
+
                     if(altura[i] > maiorAlturaTurma){
                         maiorAlturaTurma = altura[i];
                     }
                 }
-                if(maiorAlturaTurma < menorAlturaTurma){
-                    menorAlturaTurma = altura[i];
+                if(cod[i] == 2){
+                    media = media + altura[i];
                 }
             }
-
-
         }
         //int aux = (int)mediaAlturaTurmaMulher/repetidor;
         System.out.println("A maior altura da turma: "+maiorAlturaTurma);
         System.out.println("A menor altura da turma: "+menorAlturaTurma);
-        System.out.println("A media de altura entre mulheres: "+mediaAlturaTurmaMulher);
-
-
+        System.out.println("A media de altura entre mulheres: "+media);
     }
 }
