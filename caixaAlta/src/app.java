@@ -12,9 +12,12 @@ public class app {
 //        contaConsoantes();
 //        contaPalavras();
 //        diaSemana();
-        letraRepetida();
-    }
+        ////letraRepetida();
+        primeiraLetraMaiuscula();
 
+
+    }
+    //1
     public static void caixaAlta(){
         System.out.println("Digite seu nome");
         String nomeM = entrada.nextLine();
@@ -22,7 +25,7 @@ public class app {
         nomeM = nomeM.toUpperCase();
         System.out.println(nomeM);
     }
-
+    //2
     public static void contaLetra() {
         System.out.println("Digite uma palavra");
         String letras = entrada.nextLine();
@@ -32,7 +35,7 @@ public class app {
         }
         System.out.println(letras + " Possui " + Nletras + " letras");
     }
-
+    //3
     public static void contaVogal(){
         System.out.println("Digite uma Palavra: ");
         String qtdVogal = entrada.nextLine();
@@ -45,7 +48,7 @@ public class app {
         }
         System.out.println("A palavra: "+qtdVogal+ " possui: "+count+ " Vogais");
     }
-
+    //4
     public static void contaConsoantes(){
         System.out.println("Digite uma palavra");
         String consoantes = entrada.nextLine();
@@ -60,7 +63,7 @@ public class app {
         }
         System.out.println("A palavra: "+consoantes+" possui: "+count+" consoantes");
     }
-
+    //5
     public static void contaPalavras(){
         System.out.println("Digite uma frase: ");
         String qtdFrase = entrada.nextLine();
@@ -68,7 +71,10 @@ public class app {
         System.out.println("Numero de palavras: "+count);
 
     }
+    //6
+    // Escreva uma rotina (static) que receba uma String e retorne a contagem de dígitos.
 
+    //7
     public static void diaSemana(){
         System.out.println("Digite um numero de 1 até 7");
         int dia = entrada.nextInt();
@@ -98,6 +104,9 @@ public class app {
         }
     }
 
+    //8
+
+    //9
     public static void letraRepetida(){
         HashMap<Character, Integer> map = new HashMap<>();
         System.out.println("Digite uma frase: ");
@@ -112,4 +121,18 @@ public class app {
         System.out.println("Character:  - Quantidade: " + count);
 
     }
+    //10
+    public static void primeiraLetraMaiuscula(){
+        System.out.print("Digite uma frase: ");
+        String line = entrada.nextLine();
+        String letra_maiscula = "";
+        Scanner lineScan = new Scanner(line);
+        while(lineScan.hasNext()) {
+            String word = lineScan.next();
+            letra_maiscula += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+        }
+        System.out.println(letra_maiscula.trim());
+    }
+
+
 }
